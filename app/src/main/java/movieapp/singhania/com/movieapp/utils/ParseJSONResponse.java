@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import movieapp.singhania.com.movieapp.model.MovieModel;
+import movieapp.singhania.com.movieapp.model.TrailerMovieModel;
 
 /**
  * Created by mrsinghania on 28/2/17.
@@ -37,7 +38,7 @@ public class ParseJSONResponse {
         }
         return response;
     }
-    public static List<MovieModel> parseResultObject(String parseResponse){
+    public static List<MovieModel> parseResultObjectForMovieList(String parseResponse){
         int page;
         JSONArray resultObject;
         List<MovieModel> movieModelList;
@@ -50,6 +51,24 @@ public class ParseJSONResponse {
                 movieModelList.add(movieModel);
             }
             return movieModelList;
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static List<TrailerMovieModel> parseResultObjectForTrailerList(String parseResponse){
+        int page;
+        List<TrailerMovieModel> trailerMovieModelList;
+        try {
+            JSONArray resultArray=new JSONArray(parseResponse);
+            trailerMovieModelList=new ArrayList<>();
+            for(int i=0;i<resultArray.length();i++){
+                JSONObject jsonObject=resultArray.getJSONObject(i);
+                TrailerMovieModel movieModel=parseMovieTrailerModel(jsonObject);
+                trailerMovieModelList.add(movieModel);
+            }
+            return trailerMovieModelList;
         } catch (JSONException e) {
             e.printStackTrace();
             return null;
@@ -91,5 +110,28 @@ public class ParseJSONResponse {
                 e.printStackTrace();
             }
         return movieModel;
+    }
+
+    public static TrailerMovieModel parseMovieTrailerModel(JSONObject jsonObject){
+        TrailerMovieModel trailerMovieModel=new TrailerMovieModel();
+        try {
+            if(jsonObject.has(Constants.ID)) {
+                trailerMovieModel.setId(jsonObject.getLong(Constants.ID));
+            }
+            if(jsonObject.has(Constants.SITE)){
+                trailerMovieModel.setSite(jsonObject.getString(Constants.SITE));
+            }
+            if(jsonObject.has(Constants.KEY)){
+                trailerMovieModel.setKey(jsonObject.getString(Constants.KEY));
+            }
+            if(jsonObject.has(Constants.NAME)){
+                trailerMovieModel.setName(jsonObject.getString(Constants.NAME));
+            }
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return trailerMovieModel;
     }
 }

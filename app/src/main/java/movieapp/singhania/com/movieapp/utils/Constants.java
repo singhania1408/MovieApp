@@ -25,6 +25,12 @@ public class Constants {
     public static final String IMAGE_GRID_STRING = "/w150";
 
 
+    public static final String SITE = "site";
+    public static final String KEY = "key";
+    public static final String NAME = "name";
+
+
+
 
 
 }

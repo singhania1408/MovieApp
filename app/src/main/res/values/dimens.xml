@@ -7,4 +7,5 @@
     <dimen name="spinner_margin">5dp</dimen>
     <dimen name="spinner_item_padding">7dp</dimen>
     <dimen name="text_size_detail">18sp</dimen>
+    <dimen name="padding_detail_page">16dp</dimen>
 </resources>

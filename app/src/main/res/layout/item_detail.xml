@@ -16,7 +16,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:padding="16dp"
+            android:padding="@dimen/padding_detail_page"
             android:text="@string/release_date"
             android:textSize="@dimen/text_size_detail"
             android:textIsSelectable="true"
@@ -29,7 +29,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:padding="16dp"
+            android:padding="@dimen/padding_detail_page"
             android:textSize="@dimen/text_size_detail"
             android:textColor="@color/colorAccent"
             android:textIsSelectable="true"
@@ -47,7 +47,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:padding="16dp"
+            android:padding="@dimen/padding_detail_page"
             android:text="@string/user_rating"
             android:textSize="@dimen/text_size_detail"
             android:textIsSelectable="true"
@@ -60,7 +60,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:padding="16dp"
+            android:padding="@dimen/padding_detail_page"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/text_size_detail"
             android:textIsSelectable="true"
@@ -72,10 +72,19 @@
         style="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:padding="@dimen/padding_detail_page"
         android:textSize="@dimen/text_size_detail"
         android:textIsSelectable="true"
         />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/trailerList"
+        android:padding="@dimen/padding_detail_page"
+        >
+
+    </android.support.v7.widget.RecyclerView>
 
 
 

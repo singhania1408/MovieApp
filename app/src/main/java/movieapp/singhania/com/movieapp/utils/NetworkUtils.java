@@ -30,12 +30,19 @@ import java.util.Scanner;
 public class NetworkUtils {
 
     public final static String MOVIE_BASE_URL =
-            "https://api.themoviedb.org/3/";
+            "https://api.themoviedb.org/3/movie/";
+
+    public final static String MOVIE_TRAILER_BASE_URL =
+            "https://www.youtube.com/watch?v=";
 
     public final static String MOVIE_POPULAR =
-            "movie/popular";
+            "popular";
     public final static String MOVIE_TOP_RATED =
-            "movie/top_rated";
+            "top_rated";
+    public final static String MOVIE_TRAILER =
+            "/videos";
+    public final static String MOVIE_REVIEW =
+            "/reviews";
     // /discover/movie?sort_by=popularity.desc
     //  .https://api.themoviedb.org/3/discover/movie
 

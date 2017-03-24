@@ -1,39 +1,28 @@
 package movieapp.singhania.com.movieapp;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.AsyncTaskLoader;
 import android.support.v4.content.Loader;
-import android.support.v4.widget.SimpleCursorAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 
 import movieapp.singhania.com.movieapp.adapter.MovieListAdapter;
-import movieapp.singhania.com.movieapp.dummy.DummyContent;
 import movieapp.singhania.com.movieapp.model.MovieModel;
 import movieapp.singhania.com.movieapp.utils.NetworkUtils;
 import movieapp.singhania.com.movieapp.utils.ParseJSONResponse;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -182,7 +171,7 @@ public class MovieListActivity extends AppCompatActivity implements LoaderManage
         mLoadingIndicator.setVisibility(View.GONE);
         if(response!=null) {
             String parseResponse = ParseJSONResponse.parseJSONResponse(response);
-            movieModelList = ParseJSONResponse.parseResultObject(parseResponse);
+            movieModelList = ParseJSONResponse.parseResultObjectForMovieList(parseResponse);
             movieListAdapter.swapCursor(movieModelList);
         }
     }
