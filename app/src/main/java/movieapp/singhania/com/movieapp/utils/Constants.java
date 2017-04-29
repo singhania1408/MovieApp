@@ -2,12 +2,13 @@ package movieapp.singhania.com.movieapp.utils;
 
 /**
  * Created by mrsinghania on 28/2/17.
+ * Constants Defined
  */
 
 public class Constants {
 
-    public static final String PAGE="page";
-    public static final String RESULTS="results";
+    public static final String PAGE = "page";
+    public static final String RESULTS = "results";
 
     public static final String ID = "id";
     public static final String TITLE = "title";
@@ -28,9 +29,6 @@ public class Constants {
     public static final String SITE = "site";
     public static final String KEY = "key";
     public static final String NAME = "name";
-
-
-
 
 
 }

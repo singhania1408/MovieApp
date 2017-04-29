@@ -62,9 +62,9 @@ public class NetworkUtils {
 
     public static URL buildUrl(String path) {
 
-        Uri builtUri = Uri.parse(MOVIE_BASE_URL+path).buildUpon()
+        Uri builtUri = Uri.parse(MOVIE_BASE_URL + path).buildUpon()
                 .appendQueryParameter(PARAM_API, APIConstants.PARAM_API_KEY)
-                .appendQueryParameter(PARAM_SORT,PARAM_SORT_VALUE)
+                .appendQueryParameter(PARAM_SORT, PARAM_SORT_VALUE)
                 .build();
 
         URL url = null;

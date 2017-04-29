@@ -41,22 +41,28 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <ProgressBar
-        android:id="@+id/pb_loading_indicator"
-        android:layout_height="42dp"
-        android:layout_width="42dp"
-        android:layout_gravity="center_horizontal"
-        android:visibility="invisible" />
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/md_grey_200"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <include layout="@layout/item_list" />
-    </FrameLayout>
 
+        <ProgressBar
+            android:id="@+id/pb_loading_indicator"
+            android:layout_height="42dp"
+            android:layout_width="42dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible" />
 
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/md_grey_200"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <include layout="@layout/movie_list" />
+        </FrameLayout>
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -28,6 +28,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="movieapp.singhania.com.movieapp.MovieListActivity" />
         </activity>
+        
+        <provider
+            android:authorities="movieapp.singhania.com.movieapp.dao.MovieProvider"
+            android:name="movieapp.singhania.com.movieapp.dao.generated.MovieProvider"
+            android:exported="false">
+
+        </provider>
     </application>
 
 </manifest>

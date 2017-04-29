@@ -1,13 +1,12 @@
 package movieapp.singhania.com.movieapp.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * Created by mrsinghania on 1/3/17.
  */
 
-public class MovieModel implements Serializable{
+public class MovieModel implements Serializable {
     String title;
     String overView;
     boolean adult;
@@ -16,7 +15,16 @@ public class MovieModel implements Serializable{
     int vote_count;
     double vote_average;
     double popularity;
+    boolean isFav;
     String posterPath;
+
+    public boolean isFav() {
+        return isFav;
+    }
+
+    public void setFav(boolean fav) {
+        isFav = fav;
+    }
 
     public double getVote_average() {
         return vote_average;

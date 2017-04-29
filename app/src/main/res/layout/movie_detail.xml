@@ -2,9 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="movieapp.singhania.com.movieapp.ItemDetailFragment"
-    >
+    tools:context="movieapp.singhania.com.movieapp.ItemDetailFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -67,25 +67,46 @@
             tools:context="movieapp.singhania.com.movieapp.ItemDetailFragment"
             />
     </LinearLayout>
+
     <TextView
-        android:id="@+id/movie_detail"
         style="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/padding_detail_page"
         android:textSize="@dimen/text_size_detail"
+        android:text="@string/movie_trailer"
+        android:textColor="@color/colorAccent"
         android:textIsSelectable="true"
         />
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/trailerList"
         android:padding="@dimen/padding_detail_page"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
-
     </android.support.v7.widget.RecyclerView>
 
+    <TextView
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_detail_page"
+        android:textSize="@dimen/text_size_detail"
+        android:text="@string/movie_trailer"
+        android:textColor="@color/colorAccent"
+        android:textIsSelectable="true"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reviewList"
+        android:padding="@dimen/padding_detail_page"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+    </android.support.v7.widget.RecyclerView>
 
 
 </LinearLayout>

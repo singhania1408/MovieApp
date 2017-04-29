@@ -6,17 +6,17 @@ import java.io.Serializable;
  * Created by mrsinghania on 24/3/17.
  */
 
-public class TrailerMovieModel implements Serializable{
-    long id;
+public class TrailerMovieModel implements Serializable {
+    String id;
     String key;
     String name;
     String site;
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
